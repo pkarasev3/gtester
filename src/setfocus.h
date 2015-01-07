@@ -1,7 +1,7 @@
 #ifndef SETFOCUS_H
 #define SETFOCUS_H
 
-class QWidget;
+#include  <QWidget>
 
 class SetFocus
 {

@@ -52,37 +52,37 @@ FORMS += \
 
 RESOURCES += resources/icons.qrc
 
-mac {
-    LIBS += -framework cocoa
+#mac {
+#    LIBS += -framework cocoa
 
-    HEADERS += \
-        src/cocoainitializer.h
+#    HEADERS += \
+#        src/cocoainitializer.h
 
-    OBJECTIVE_SOURCES += \
-        src/setfocus.mm \
-        src/cocoainitializer.mm \
-        src/globalprogress_mac.mm
+#    OBJECTIVE_SOURCES += \
+#        src/setfocus.mm \
+#        src/cocoainitializer.mm \
+#        src/globalprogress_mac.mm
 
-    ICON = resources/gtester.icns
+#    ICON = resources/gtester.icns
 
-    RESFILES.files = resources/gtester-file.icns
-    RESFILES.path = Contents/Resources
-    QMAKE_BUNDLE_DATA += RESFILES
+#    RESFILES.files = resources/gtester-file.icns
+#    RESFILES.path = Contents/Resources
+#    QMAKE_BUNDLE_DATA += RESFILES
 
-    QMAKE_INFO_PLIST = resources/Info.plist
-    OTHER_FILES += resources/Info.plist
-}
+#    QMAKE_INFO_PLIST = resources/Info.plist
+#    OTHER_FILES += resources/Info.plist
+#}
 
-linux {
+#linux {
     SOURCES += \
         src/setfocus.cpp \
         src/globalprogress_x11.cpp
-}
+#}
 
-win32 {
-    SOURCES += \
-        src/setfocus.cpp \
-        src/globalprogress_win.cpp
+#win32 {
+#    SOURCES += \
+#        src/setfocus.cpp \
+#        src/globalprogress_win.cpp
 
     RC_FILE = resources/gtester.rc
-}
+#}

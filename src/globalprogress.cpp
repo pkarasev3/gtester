@@ -1,5 +1,8 @@
 #include "globalprogress.h"
 
+#include "mainwindow.h"
+#include <QObject>
+
 GlobalProgress::GlobalProgress(QObject *parent)
     : QObject(parent), _windows(), sumErrorCount(0), sumProgress(0), numProgress(0)
 {

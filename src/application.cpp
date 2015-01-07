@@ -7,6 +7,7 @@
 #include <QDesktopServices>
 #include <QLocalSocket>
 #include <QFileOpenEvent>
+#include <QUrl>
 
 #ifdef Q_OS_MAC
 #include <objc/objc.h>
@@ -180,7 +181,7 @@ void Application::OpenFile(const QString &file)
 
 void Application::WindowClosed(MainWindow *window)
 {
-    _windows.removeAt(_windows.indexOf(window));
+    _windows.remove(_windows.indexOf(window));
     if (_lastActiveWindow == window) {
         _lastActiveWindow = 0;
     }
