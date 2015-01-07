@@ -6,6 +6,10 @@
 #include <QLocalServer>
 #include <QPointer>
 
+#if !defined(GTESTER_VERSION)
+    #define GTESTER_VERSION   __DATE__ __TIME__
+#endif
+
 #include "globalprogress.h"
 
 #ifdef Q_OS_MAC
